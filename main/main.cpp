@@ -40,9 +40,6 @@ extern "C"
             gpio_set_direction(piny[i], GPIO_MODE_OUTPUT);
         }
         
-        
-
-        
 
         while (true)
         {
@@ -56,10 +53,7 @@ extern "C"
                 vTaskDelay(1);
             }
 
-            //ESP_LOGI(button.TAG, "button pressed");
             counter++;
-
-            
 
             while(gpio_get_level(button.inputPin) == 1){
                 vTaskDelay(1);
